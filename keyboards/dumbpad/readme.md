@@ -9,8 +9,9 @@ Keyboard Maintainer: [imchipwood](https://github.com/imchipwood)
 PCB repository: https://github.com/imchipwood/dumbpad
 
 Available Layouts:
-- v0x
-- v0x_dualencoder
+- v0x - single encoder on the left side
+- v0x_right - single encoder on the right side (PCB flipped over)
+- v0x_dualencoder - two encoders (top or bottom, both supported)
 
 Make example for this keyboard for <layout>, <keymap> (after setting up your build environment):
 
