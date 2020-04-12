@@ -1,4 +1,4 @@
-/* Copyright 2019 Chip
+/* Copyright 2020 imchipwood
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@ void keyboard_pre_init_kb(void) {
   // Set the layer LED IO as outputs
   setPinOutput(LAYER_INDICATOR_LED_0);
   setPinOutput(LAYER_INDICATOR_LED_1);
-  
+
   keyboard_pre_init_user();
 }
 

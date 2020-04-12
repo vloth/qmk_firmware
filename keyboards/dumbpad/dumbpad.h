@@ -21,4 +21,6 @@
   #include "v0x.h"
 #elif defined(KEYBOARD_dumbpad_v0x_dualencoder)
   #include "v0x_dualencoder.h"
+#elif defined(KEYBOARD_dumbpad_v0x_right)
+  #include "v0x_right.h"
 #endif // dumbpad revisions

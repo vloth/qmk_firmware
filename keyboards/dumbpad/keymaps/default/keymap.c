@@ -1,4 +1,4 @@
-/* Copyright 2019 imchipwood
+/* Copyright 2020 imchipwood
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 #define _BASE 0
 #define _SUB  1
 
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /*
         BASE LAYER
@@ -32,10 +33,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    \-----------------------------------------------------'
   */
   [_BASE] = LAYOUT(
-                   KC_7,      KC_8,    KC_9,     KC_BSPC, 
-                   KC_4,      KC_5,    KC_6,     KC_ESC, 
-                   KC_1,      KC_2,    KC_3,     KC_TAB, 
+                   KC_7,      KC_8,    KC_9,     KC_BSPC,
+                   KC_4,      KC_5,    KC_6,     KC_ESC,
+                   KC_1,      KC_2,    KC_3,     KC_TAB,
+#if defined(KEYBOARD_dumbpad_v0x)
     KC_BTN1,       TT(_SUB),  KC_0,    KC_DOT,   KC_ENTER
+#elif defined(KEYBOARD_dumbpad_v0x_right)
+                   TT(_SUB),  KC_0,    KC_DOT,   KC_ENTER, KC_BTN1
+#endif
   ),
   /*
         SUB LAYER
@@ -50,10 +55,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    \-----------------------------------------------------'
   */
   [_SUB] = LAYOUT(
-                 _______,     _______,     _______,      RESET, 
-                 _______,     _______,     _______,      KC_KP_PLUS, 
-                 _______,     _______,     _______,      KC_KP_MINUS, 
+                 _______,     _______,     _______,      RESET,
+                 _______,     _______,     _______,      KC_KP_PLUS,
+                 _______,     _______,     _______,      KC_KP_MINUS,
+#if defined(KEYBOARD_dumbpad_v0x)
     KC_LOCK,     _______,     _______,     _______,      KC_EQL
+#elif defined(KEYBOARD_dumbpad_v0x_right)
+                 _______,     _______,     _______,      KC_EQL,       KC_LOCK
+#endif
   ),
 };
 
@@ -62,7 +71,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 /*
 #ifdef CONSOLE_ENABLE
     uprintf("KL: kc: %u, col: %u, row: %u, pressed: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed);
-#endif 
+#endif
 */
   return true;
 }
