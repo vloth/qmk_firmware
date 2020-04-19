@@ -37,9 +37,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                    KC_4,      KC_5,    KC_6,     KC_ESC,
                    KC_1,      KC_2,    KC_3,     KC_TAB,
 #if defined(KEYBOARD_dumbpad_v0x)
-    KC_BTN1,       TT(_SUB),  KC_0,    KC_DOT,   KC_ENTER
+    KC_BTN1,       TT(_SUB),  KC_0,    LSFT_T(KC_DOT),   KC_ENTER
 #elif defined(KEYBOARD_dumbpad_v0x_right)
-                   TT(_SUB),  KC_0,    KC_DOT,   KC_ENTER, KC_BTN1
+                   TT(_SUB),  KC_0,    LSFT_T(KC_DOT),   KC_ENTER, KC_BTN1
 #endif
   ),
   /*
