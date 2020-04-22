@@ -1,10 +1,10 @@
 #pragma once
 
 /* LED layer indicator IO are flipped */
-#undef LAYER_INDICATOR_LED_0
-#undef LAYER_INDICATOR_LED_1
-#define LAYER_INDICATOR_LED_0 B1
-#define LAYER_INDICATOR_LED_1 B3
+#undef LED_00
+#undef LED_02
+#define LED_00 B1
+#define LED_02 B6
 
 /*
 #undef ENCODERS_PAD_A
