@@ -30,13 +30,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    |             |---------|---------|---------|---------|
    |             |    1    |    2    |    3    |    *    |
    |-------------|---------|---------|---------|---------|
-   | Play/Pause  | TT(SUB) |    0    |    .    |  Enter  |
+   | Play/Pause  | TT(SUB) |    0    | LSFT(.) |  Enter  |
    \-----------------------------------------------------'
   */
   [_BASE] = LAYOUT(
-                   KC_P7,     KC_P8,   KC_P9,    KC_BSPC,
-                   KC_P4,     KC_P5,   KC_P6,    KC_KP_PLUS,
-                   KC_P1,     KC_P2,   KC_P3,    KC_KP_ASTERISK,
+                   KC_P7,     KC_P8,   KC_P9,            KC_BSPC,
+                   KC_P4,     KC_P5,   KC_P6,            KC_KP_PLUS,
+                   KC_P1,     KC_P2,   KC_P3,            KC_KP_ASTERISK,
 #if defined(KEYBOARD_dumbpad_v0x)
     KC_MPLY,       TT(_SUB),  KC_P0,   LSFT_T(KC_PDOT),  KC_KP_ENTER
 #elif defined(KEYBOARD_dumbpad_v0x_right)
