@@ -33,3 +33,4 @@
 #endif
 
 #define AUTO_SHIFT_TIMEOUT 135
+#define AUDIO_CLICKY
