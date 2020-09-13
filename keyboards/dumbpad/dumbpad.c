@@ -44,6 +44,9 @@ layer_state_t layer_state_set_kb(layer_state_t state) {
 // These are only required if you want to perform custom actions.
 
 void matrix_init_kb(void) {
+  DDRD &= ~(1<<5); PORTD &= ~(1<<5);
+  DDRB &= ~(1<<0); PORTB &= ~(1<<0);
+
   // put your keyboard start-up code here
   // runs once when the firmware starts up
   uint8_t led_delay_ms = 80;

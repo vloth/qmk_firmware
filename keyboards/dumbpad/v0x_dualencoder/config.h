@@ -11,3 +11,7 @@
 #undef ENCODERS_PAD_B
 #define ENCODERS_PAD_A { C6, D0 }
 #define ENCODERS_PAD_B { D4, D1 }
+
+#define RGB_DI_PIN B6
+#define RGBLED_NUM 17
+#define RGBLIGHT_ANIMATIONS
