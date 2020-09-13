@@ -58,7 +58,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
         break;
 
       default:
-        clockwise ? rgblight_increase_val() : rgblight_decrease_val();
+        clockwise ? rgblight_increase_hue() : rgblight_decrease_hue();
         break;
     }
   }
