@@ -13,7 +13,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT(
     ZOOM_TOGGLE_MUTE,    KC_F7,    KC_8,      KC_9,
     TD(CT_INPUT), KC_F4,    KC_F5,     KC_F6,
-    S(G(KC_L)),   KC_F1,    KC_F2,     KC_F3,
+    S(G(KC_L)),   S(G(KC_1)),    S(G(KC_2)),     KC_F3,
     _______,      TG(_LOW), TG(_HIGH), KC_MPLY
   ),
   [_LOW] = LAYOUT(
